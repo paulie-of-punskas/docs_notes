@@ -1,7 +1,7 @@
 ### Kap padaryt "uv_labas" Python package su `uv`
 
 #### Projekto struktura
-`
+```
 .
 ├── README.md
 ├── pyproject.toml
@@ -13,7 +13,7 @@
 │       └── return_hello.py
 ├── tests
 └── uv.lock
-`
+```
 
 #### Kap sukurt
 1. `uv init --lib uv_labas`
@@ -25,7 +25,7 @@
 5. `uv build`
 
 #### Kap pridet / ismest deps
-6. `uv add/remove <package name>` ARBA rankomis pridet `pyproject.toml`
+6. `uv add/remove <package name>` ARBA rankomis pridet `dependencies = []` @ `pyproject.toml`
 
 ### Source
 https://sarahglasmacher.com/how-to-build-python-package-uv/
