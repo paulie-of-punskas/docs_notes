@@ -24,6 +24,9 @@
 4. `uv run`
 5. `uv build`
 
+#### Kap paleist testus
+`uv add pytest --dev` // [source](https://github.com/astral-sh/uv/issues/7260#issuecomment-2560957424)
+
 #### Kap pridet / ismest deps
 6. `uv add/remove <package name>` ARBA rankomis pridet `dependencies = []` @ `pyproject.toml`
 
