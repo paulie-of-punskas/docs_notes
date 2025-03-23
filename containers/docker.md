@@ -2,9 +2,9 @@
 
 ## How to:
 #### Add secrets:
-Sukurt `docker-compose.yaml` (pvz. apacioj). `my-secret-app` build time'e sukurs kintamuosius `marta` ir `secret_2`:
-    - `marta` verte yra `/run/secrets/my_secret` content'e. File'as yra sukuriamas is zemiau esancio secrets.txt. T.y.: `secrets.txt` > `my_secret` yra reference > `/run/secrets` yra sukuriam'a automatiskai Docker compose
-    - `secret_2` gana aisku, definiuojam ji kaip bash'ui
+Sukurt `docker-compose.yaml` (pvz. apacioj). `my-secret-app` build time'e sukurs kintamuosius `marta` ir `secret_2`:  
+- `marta` verte yra `/run/secrets/my_secret` content'e. File'as yra sukuriamas is zemiau esancio secrets.txt. T.y.: `secrets.txt` > `my_secret` yra reference > `/run/secrets` yra sukuriam'a automatiskai Docker compose
+- `secret_2` gana aisku, definiuojam ji kaip bash'ui
 
 ```yaml
 services:
