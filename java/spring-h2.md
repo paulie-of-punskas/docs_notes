@@ -1,5 +1,5 @@
 #### Kap padaryt
-- sukuriam `resources/db_schema.sql`, kuriame yra DB schema
+- sukuriam `resources/schema.sql`, kuriame yra DB schema
 - `resources/application.properties` irasom:
 ```java
 spring.application.name=track_workout
