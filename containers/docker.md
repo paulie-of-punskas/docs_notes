@@ -91,10 +91,8 @@ CMD ["java", "-showversion", "-jar", "/opt/app/track_workout-0.0.1-SNAPSHOT.jar"
 ### 650 MB
 
 ```
-# (1)
 FROM alpine:latest AS build 
 
-# (2)
 ADD https://download.bell-sw.com/java/17.0.14+10/bellsoft-jdk17.0.14+10-linux-x64-musl.tar.gz /opt/jdk/
 RUN tar -xzvf /opt/jdk/bellsoft-jdk17.0.14+10-linux-x64-musl.tar.gz -C /opt/jdk/
 
