@@ -11,13 +11,12 @@ Runnable runnable = new Runnable() {
 ### **Labiausiai paplite Functional Interfaces**
 | **Interface** | **Funkcija** | **Aprasymas** | **Return** |
 | ------------- | ------------ | ------------------------- | - |
-| Predicate     | `test()`     | 1 input, test a condition | True/False |
-| Consumer      | `accept()`   | 1 input, nieko negrazina  | void |
-| Supplier      | `get()`        | 1 input, 1 output         | |
-
-- Function
-- BiFunction<T, R>
-- Runnable
+| Predicate     | `test()`     | 1 argument, boolean valued function | True/False |
+| Consumer      | `accept()`   | 1 argument, no result | No return, void |
+| Supplier      | `get()`      | No argument, 1 result | |
+| Function      | `apply()`    | 1 argument, 1 result| | |
+| BiFunction<T, R> | `apply()` | 2 arguments, 1 result | |
+| Runnable | | |
 
 ### **Pavyzdziai**
 #### **Predicate**
@@ -30,6 +29,35 @@ System.out.println(ss.test("Labas")); // true
 Predicate<Integer> isEven = (Integer i) -> i % 2 == 0;
 System.out.println(isEven.test(0)); // true
 System.out.println(isEven.test(2)); // true
+```
+
+#### **Consumer**
+```Java
+Consumer<String> cc = message -> System.out.println(message);
+cc.accept("Labas rytas is Kalabybiskiu rajono!");
+System.out.println(LocalDateTime.now().getDayOfWeek());
+
+List<String> names = Arrays.asList("John", "Freddy", "Samuel");
+names.forEach(name -> System.out.println("Hello, " + name));
+
+Map<String, Integer> ages = new HashMap<>();
+ages.put("John", 25);
+ages.put("Freddy", 24);
+ages.put("Samuel", 30);
+
+ages.forEach((name, age) -> System.out.println(name + " is " + age + " years old"));
+```
+
+#### **Supplier**
+```Java
+Supplier<Double> ss = () -> Math.random();
+System.out.println(ss.get());
+```
+
+#### **Function**
+```Java
+Function<String, Integer> stringLength = str -> str.length();
+System.out.println(stringLength.apply("Lambda")); // Output: 6
 ```
 
 ### **Nuorodos**
