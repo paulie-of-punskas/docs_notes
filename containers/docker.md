@@ -17,7 +17,7 @@ docker run --env VARIABLE1='VALUE1' -t name_of_image:latest
 
 #### Add secrets:
 
-Sukurt `docker-compose.yaml` (pvz. apacioj). `my-secret-app` build time'e sukurs kintamuosius `marta` ir `secret_2`:  
+Sukurt `docker-compose.yaml` (pvz. apacioj). `my-secret-app` build time'e sukurs kintamuosius `marta` ir `secret_2`:
 - `marta` verte yra `/run/secrets/my_secret` content'e. File'as yra sukuriamas is zemiau esancio secrets.txt. T.y.: `secrets.txt` > `my_secret` yra reference > `/run/secrets` yra sukuriam'a automatiskai Docker compose
 - `secret_2` gana aisku, definiuojam ji kaip bash'ui
 
@@ -55,7 +55,7 @@ RUN ["jlink", "--compress=2", \
      "--output", "/optimized-jdk-17"]
 
 FROM alpine:latest
-COPY --from=build  /optimized-jdk-17 /opt/jdk 
+COPY --from=build  /optimized-jdk-17 /opt/jdk
 ENV PATH=$PATH:/opt/jdk/bin
 
 EXPOSE 8080
@@ -80,7 +80,7 @@ RUN ["jlink", "--compress=2", \
      "--output", "/optimized-jdk-17"]
 
 FROM alpine:latest
-COPY --from=build  /optimized-jdk-17 /opt/jdk 
+COPY --from=build  /optimized-jdk-17 /opt/jdk
 ENV PATH=$PATH:/opt/jdk/bin
 
 EXPOSE 8080
@@ -91,7 +91,7 @@ CMD ["java", "-showversion", "-jar", "/opt/app/track_workout-0.0.1-SNAPSHOT.jar"
 ### 650 MB
 
 ```
-FROM alpine:latest AS build 
+FROM alpine:latest AS build
 
 ADD https://download.bell-sw.com/java/17.0.14+10/bellsoft-jdk17.0.14+10-linux-x64-musl.tar.gz /opt/jdk/
 RUN tar -xzvf /opt/jdk/bellsoft-jdk17.0.14+10-linux-x64-musl.tar.gz -C /opt/jdk/
@@ -104,7 +104,7 @@ CMD ["java", "-showversion", "-jar", "/opt/app/track_workout-0.0.1-SNAPSHOT.jar"
 ```
 
 # URLs:
-Use secrets: 
+Use secrets:
 - https://docs.docker.com/compose/how-tos/use-secrets/
 
 Use environment variables in Compose:
