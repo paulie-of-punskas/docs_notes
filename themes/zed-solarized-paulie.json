@@ -4,7 +4,7 @@
   "name": "Solarized -- paulie",
   "themes": [
     {      
-			"appearance": "light",
+	  "appearance": "light",
       "name": "Solarized Light -- paulie",
       "style": {
         "accents": [
