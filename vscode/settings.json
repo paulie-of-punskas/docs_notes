@@ -1,0 +1,33 @@
+{
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.sideBar.location": "right",
+    "editor.dragAndDrop": false,
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoSurround": "never",
+    "files.trimTrailingWhitespace": true,
+    "editor.fontFamily": "Go Mono",
+    "editor.fontSize": 16,
+    "telemetry.telemetryLevel": "off",
+    "editor.minimap.enabled": false,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "extensions.autoUpdate": false,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.startupEditor": "none",
+    "editor.mouseWheelZoom": true,
+    "editor.autoClosingComments": "never",
+    "html.autoCreateQuotes": false,
+    "explorer.confirmDelete": false,
+    "editor.stickyScroll.enabled": false,
+    "git.confirmSync": false,
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "never"
+        }
+    },
+    "terminal.integrated.stickyScroll.enabled": false,
+    "update.showReleaseNotes": false,
+    "git.enableSmartCommit": true,
+}
